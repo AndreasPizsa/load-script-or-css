@@ -1,0 +1,60 @@
+{
+  "name": "load-script-or-css",
+  "version": "0.0.0",
+  "description": "Load a script or stylesheet in the browser asynchronously, returning a Promise",
+  "main": "index.js",
+  "scripts": {
+    "test": "nyc ava",
+    "pretest": "xo"
+  },
+  "homepage": "https://github.com/AndreasPizsa/load-script-or-css",
+  "repository": "https://github.com/AndreasPizsa/load-script-or-css.git",
+  "bugs": "https://github.com/AndreasPizsa/load-script-or-css/issues",
+  "keywords": [
+    "load",
+    "inject",
+    "script",
+    "javascript",
+    "js",
+    "stylesheet",
+    "css",
+    "async",
+    "asynchronously",
+    "promise",
+    "browser"
+  ],
+  "author": "Andreas Pizsa <hopster@gmail.com> (https://github.com/AndreasPizsa)",
+  "license": "MIT",
+  "devDependencies": {
+    "@andreaspizsa/eslint-config-xo": "^0.2.0",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "ava": "^3.8.1",
+    "finepack": "^2.10.1",
+    "husky": "^4.2.5",
+    "np": "^6.2.3",
+    "nyc": "^15.0.1",
+    "standard-version": "^7.1.0",
+    "xo": "^0.28.0"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": true,
+    "extends": [
+      "@andreaspizsa/eslint-config-xo"
+    ],
+    "envs": [
+      "browser"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}
