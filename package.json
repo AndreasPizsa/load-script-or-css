@@ -2,8 +2,10 @@
   "name": "load-script-or-css",
   "version": "0.0.1",
   "description": "Load a script or stylesheet in the browser asynchronously, returning a Promise",
-  "main": "index.js",
   "scripts": {
+    "build": "rimraf dist && microbundle src/index.js",
+    "prebuild": "npm test",
+    "dev": "microbundle watch src/index.js",
     "test": "nyc ava",
     "pretest": "xo"
   },
@@ -58,5 +60,16 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
-  }
+  },
+  "browserslist": [
+    "ie >= 11"
+  ],
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.m.js",
+  "esmodule": "dist/index.modern.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ]
 }
