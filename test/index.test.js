@@ -22,7 +22,7 @@ global.document = {
 }
 
 test('createElement', t => {
-  const attributes = Array.from({length: randomInteger(20) * 2}, randomString)
+  const attributes = Array.from({length: randomInteger(20, 1) * 2}, randomString)
   const tag = randomString()
   const element = createElement(tag, attributes)
 
