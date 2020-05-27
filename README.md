@@ -7,20 +7,20 @@
 const {loadCss, loadScript} = require('load-script-or-css')
 
 // Load one Stylesheet
-await loadCss('http://unpkg.com/bootstrap/dist/css/bootstrap.min.css')
+await loadCss('https://unpkg.com/bootstrap/dist/css/bootstrap.min.css')
 
 // Load one script
-await loadScript('http://unpkg.com/bootstrap/dist/js/bootstrap.min.js')
+await loadScript('https://unpkg.com/bootstrap/dist/js/bootstrap.min.js')
 
 // load a stylesheet and a script
 await Promise.all([
-  loadCss('http://unpkg.com/bootstrap/dist/css/bootstrap.min.css'),
-  loadScript('http://unpkg.com/bootstrap/dist/js/bootstrap.min.js')
+  loadCss('https://unpkg.com/bootstrap/dist/css/bootstrap.min.css'),
+  loadScript('https://unpkg.com/bootstrap/dist/js/bootstrap.min.js')
 ])
 
-// load a stylesheet and a script, but don’t fail if one
+// load a stylesheet and a script, and don’t fail if either of them fails
 await Promise.all([
-  loadCss('http://unpkg.com/bootstrap/dist/css/bootstrap.min.css').dontThrow(),
-  loadScript('http://unpkg.com/bootstrap/dist/js/bootstrap.min.js').dontThrow()
+  loadCss('https://unpkg.com/bootstrap/dist/css/bootstrap.min.css').dontThrow(),
+  loadScript('https://unpkg.com/bootstrap/dist/js/bootstrap.min.js').dontThrow()
 ])
 ```

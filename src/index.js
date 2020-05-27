@@ -24,7 +24,8 @@ const createElementAndAppendTo = (target, tag, ...attrs) => {
   const element = createElement(tag, attrs)
   // Be sure to add the event listeners before actually appending, because
   // appending triggers loading. If we would add the event listeners _after_
-  // appending the element, the scripts _might_ theoretically appendbe them after the
+  // appending the element, the scripts _might_ theoretically be appended
+  // before the listeners were attached, thus the listerens would never trigger
   const promise = promiseForElementLoad(element)
   target.append(element)
   promise.dontThrow = () => promise.catch(error => error)
