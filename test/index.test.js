@@ -1,5 +1,6 @@
 const test = require('ava')
-const {createElement, promiseForElementLoad, loadScript, loadCss} = require('.')
+// eslint-disable-next-line unicorn/import-index
+const {createElement, promiseForElementLoad, loadScript, loadCss} = require('../src/index.js')
 
 global.document = {
   createElement() {

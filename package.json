@@ -1,13 +1,15 @@
 {
   "name": "load-script-or-css",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Load a script or stylesheet in the browser asynchronously, returning a Promise",
   "scripts": {
     "build": "rimraf dist && microbundle src/index.js",
     "prebuild": "npm test",
     "dev": "microbundle watch src/index.js",
     "test": "nyc ava",
-    "pretest": "xo"
+    "pretest": "xo",
+    "publish": "standard-version",
+    "prepublish": "npm run build"
   },
   "homepage": "https://github.com/AndreasPizsa/load-script-or-css",
   "repository": "https://github.com/AndreasPizsa/load-script-or-css.git",
