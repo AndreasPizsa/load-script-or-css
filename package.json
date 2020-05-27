@@ -1,6 +1,6 @@
 {
   "name": "load-script-or-css",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Load a script or stylesheet in the browser asynchronously, returning a Promise",
   "scripts": {
     "build": "rimraf dist && microbundle src/index.js",
